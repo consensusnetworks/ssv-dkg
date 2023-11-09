@@ -97,3 +97,6 @@ critic-prepare:
 	go install -v github.com/go-critic/go-critic/cmd/gocritic@latest
 critic:
 	gocritic check -enableAll ./...
+
+start-operator:
+	$(BUILD_PATH) start-operator --configPath=$(CONFIG_PATH)

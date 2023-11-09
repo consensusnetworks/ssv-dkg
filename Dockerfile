@@ -9,7 +9,7 @@ RUN go mod download && go mod verify
 COPY ./ ./
 
 # Build
-RUN CGO_ENABLED=1 GOOS=linux go build -o /app /cmd/ssv-dkg/ssv-dkg.go
+RUN CGO_ENABLED=1 GOOS=linux go install /cmd/ssv-dkg/ssv-dkg.go
 
 
 EXPOSE 3030
